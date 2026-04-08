@@ -1,0 +1,590 @@
+/* Reverting to the premium MeetSpace Dark Mode UI */
+
+.homePage {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #161b22;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  height: 100%;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #a78bfa;
+  margin-bottom: 40px;
+  padding-left: 12px;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #8b949e;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.menu-item:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #c9d1d9;
+}
+
+.menu-item.active {
+  background-color: #2e245c;
+  color: #a78bfa;
+}
+
+.menu-item.active svg {
+  color: #a78bfa;
+}
+
+/* User Profile */
+.user-profile-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: #21262d;
+  border-radius: 8px;
+  margin-top: auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.user-details h4 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c9d1d9;
+}
+
+.user-details p {
+  margin: 0;
+  font-size: 11px;
+  color: #8b949e;
+}
+
+.logout-btn {
+  color: #ff7b72;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 123, 114, 0.1);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.welcome-header {
+  margin-bottom: 32px;
+}
+
+.welcome-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.welcome-header p {
+  font-size: 15px;
+  color: #8b949e;
+  margin: 0;
+}
+
+/* Action Cards */
+.action-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.new-meet-card {
+  flex: 1;
+  max-width: 250px;
+  background: #8b5cf6;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  border: none;
+  color: white;
+  min-height: 180px;
+}
+
+.new-meet-card:hover {
+  background-color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.new-meet-card svg {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.new-meet-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.new-meet-card p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.join-meet-card {
+  flex: 2;
+  background-color: #161b22;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #30363d;
+  min-height: 180px;
+}
+
+.join-meet-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.join-input-group {
+  display: flex;
+  gap: 16px;
+}
+
+.join-input-group input {
+  flex: 1;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px 20px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.join-input-group input:focus {
+  border-color: #8b5cf6;
+}
+
+.join-btn {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 32px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.join-btn:hover {
+  background-color: #7c3aed;
+}
+
+.join-error {
+  color: #ff7b72;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* My Meetings */
+.meetings-section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #8b949e;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  color: #8b949e;
+  text-align: center;
+}
+
+.empty-state svg {
+  font-size: 48px;
+  color: #30363d;
+  margin-bottom: 16px;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+.meets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.meet-item {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+
+.meet-item:hover {
+  border-color: #8b5cf6;
+}
+
+.meet-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.meet-meta {
+  font-size: 13px;
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+
+.meet-id {
+  font-size: 11px;
+  color: #484f58;
+  font-family: monospace;
+  margin: 0;
+}
+
+.meet-item-actions button {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.meet-item-actions button:hover {
+  background-color: #30363d;
+  border-color: #8b949e;
+}
+
+/* Schedule Section */
+.schedule-section {
+  max-width: 600px;
+}
+
+.schedule-form {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b949e;
+}
+
+.form-group input {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #8b5cf6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.schedule-btn {
+  background-color: #8b5cf6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.schedule-btn:hover {
+  background-color: #7c3aed;
+}
+
+/* Settings Section */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 800px;
+}
+
+.settings-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.settings-card h3 {
+  margin: 0 0 24px 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8b949e;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.profile-edit-preview {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.large-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.profile-details {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item label {
+  font-size: 12px;
+  color: #8b949e;
+  font-weight: 500;
+}
+
+.detail-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.mono {
+  font-family: monospace;
+  background-color: #0d1117;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px !important;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #30363d;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+
+.secondary-btn {
+  background-color: rgba(255, 123, 114, 0.1);
+  color: #ff7b72;
+  border: 1px solid rgba(255, 123, 114, 0.2);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 123, 114, 0.2);
+}
+
+.preference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pref-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.pref-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.pref-toggle {
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle-bg {
+  width: 100%;
+  height: 100%;
+  background-color: #30363d;
+  border-radius: 12px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.toggle-bg.active {
+  background-color: #8b5cf6;
+}
+
+.toggle-knob {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.2s;
+}
+
+.toggle-bg.active .toggle-knob {
+  transform: translateX(20px);
+}
+
+/* Login State */
+.login-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0d1117;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-overlay h1 {
+  color: white;
+  font-size: 32px;
+}
+
+.login-overlay button {
+  background-color: #8b5cf6;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
